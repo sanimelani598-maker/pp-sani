@@ -224,3 +224,16 @@ footer {
     flex-wrap: wrap;
   }
 }
+.menu-tugas {
+  display: flex;
+  gap: 20px;}
+.cta-button {
+  background-color: #e74c3;
+  color: white;
+  font-weight: bold;
+
+  padding: 8px 15px;
+  border-radius: 5px;
+
+  transition: background-color 0.3s ease;
+}
