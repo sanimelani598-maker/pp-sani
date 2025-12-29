@@ -1,0 +1,226 @@
+/* ====== RESET DASAR ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== BODY ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #4a4a4a;
+  background: linear-gradient(135deg, #ffbcd1, #ffe6ef);
+  line-height: 1.6;
+}
+
+main,
+header,
+nav,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ====== HEADER ====== */
+header {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+  background: none;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #ff5f9e;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #b03060;
+}
+
+/* ====== NAVIGATION (PINK CHIP MENU) ====== */
+nav {
+  background: rgba(255, 182, 193, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+  margin-bottom: 1.6rem;
+  position: sticky;
+  top: 0.6rem;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.7rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  background: white;
+  padding: 0.45rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ff5f9e;
+  border: 2px solid #ff9eb5;
+  transition: 0.2s ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #ff9eb5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ====== KARTU STYLE (SEMUA SECTION) ====== */
+section,
+aside {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1.4rem;
+  border-radius: 1rem;
+  margin-bottom: 1.3rem;
+  border: 2px solid #ffd4e4;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+}
+
+/* ====== SECTION TENTANG SAYA ====== */
+#tentang {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+#tentang img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 0.7rem;
+  border: 4px solid #ff9eb5;
+  box-shadow: 0 10px 22px rgba(255, 105, 180, 0.4);
+}
+
+#tentang p {
+  font-size: 0.95rem;
+}
+
+#tentang aside {
+  background: #ffe6ef;
+  border: 2px solid #ffbcd1;
+  box-shadow: none;
+  font-size: 0.9rem;
+}
+
+/* ====== TABEL PENDIDIKAN ====== */
+#pendidikan table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff0f6;
+  margin-top: 0.5rem;
+}
+
+#pendidikan caption {
+  font-weight: bold;
+  color: #ff5f9e;
+  margin-bottom: 0.5rem;
+}
+
+#pendidikan thead {
+  background: #ff9eb5;
+  color: white;
+}
+
+#pendidikan th,
+#pendidikan td {
+  padding: 0.6rem;
+  border: 1px solid #ffbcd1;
+}
+
+#pendidikan tbody tr:nth-child(even) {
+  background: #ffe6ef;
+}
+
+#pendidikan tfoot {
+  background: #ffd9e7;
+  font-style: italic;
+}
+
+/* ====== DAFTAR KEAHLIAN ====== */
+#keahlian ul {
+  margin-left: 1.2rem;
+}
+
+#keahlian li {
+  margin-bottom: 0.3rem;
+}
+
+#keahlian h3 {
+  margin-top: 1rem;
+  color: #ff5f9e;
+}
+
+#keahlian dt {
+  font-weight: bold;
+  margin-top: 0.4rem;
+}
+
+#keahlian dd {
+  margin-left: 1rem;
+}
+
+/* ====== KARYA / PROJECT ====== */
+#karya iframe,
+#karya img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 3px solid #ff9eb5;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+}
+
+#karya a {
+  color: #ff5f9e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#karya a:hover {
+  text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  color: #b03060;
+  font-size: 0.85rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  #tentang {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #tentang img {
+    margin: 0 auto 0.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
