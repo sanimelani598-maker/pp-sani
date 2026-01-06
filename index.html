@@ -1,147 +1,243 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Portofolio Saya</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Digital</title>
+  <style>
+    body{
+      margin:0;
+      font-family:'Segoe UI', Arial, sans-serif;
+      background:#f5f5f5;
+      scroll-behavior:smooth;
+    }
+    nav{
+      position:fixed;
+      top:0;left:0;
+      width:100%;
+      background:#aba48f;
+      padding:15px;
+      text-align:center;
+      z-index:1000;
+    }
+    nav a{
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    nav a:hover{text-decoration:underline;}
 
+    section{padding:100px 60px;}
+    h2{text-align:center;margin-bottom:30px;}
+
+    /* HERO */
+    #hero{
+      height:100vh;
+      background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+    #hero h1{font-size:3.5rem;}
+    #hero p{font-size:1.4rem;font-style:italic;}
+
+    /* STATS */
+    #stats{display:flex;justify-content:space-around;background:white;text-align:center;}
+    .stat h3{font-size:2.5rem;color:#2c3e50;margin:0;}
+
+    /* ABOUT */
+    #about{background:#ecf0f1;}
+    .container{max-width:1000px;margin:auto;}
+    .vision-mission,.values,.signature{display:flex;gap:20px;margin-top:30px;}
+    .box{background:white;padding:20px;border-radius:10px;flex:1;}
+
+    /* TEAM */
+    .team{display:flex;gap:25px;justify-content:center;margin-top:30px;}
+    .member{background:white;padding:15px;border-radius:10px;width:180px;text-align:center;}
+    .member img{width:100%;border-radius:50%;}
+
+    /* MENU */
+    table{width:100%;border-collapse:collapse;margin-top:30px;}
+    th,td{padding:12px;border-bottom:1px solid #ccc;text-align:left;}
+    th{background:#2c3e50;color:white;}
+
+    /* FACILITIES */
+    #facilities ul{max-width:600px;margin:auto;list-style:check;}
+
+    /* CONTACT */
+    .branches{display:flex;gap:20px;margin-top:20px;}
+    .map{background:#ccc;height:200px;border-radius:10px;text-align:center;line-height:200px;}
+
+    footer{background:#2c3e50;color:white;text-align:center;padding:20px;}
+
+    @media(max-width:768px){
+      #stats,.vision-mission,.values,.signature,.team,.branches{flex-direction:column;}
+      section{padding:100px 30px;}
+    }
+  </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Sani Melani</h1>
-        <p>Selamat datang di halaman portofolio pribadi saya.</p>
-    </header>
+<nav>
+  <a href="#hero">Home</a>
+  <a href="#about">Tentang</a>
+  <a href="#facilities">Fasilitas</a>
+  <a href="#contact">Kontak</a>
+</nav>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <ul>
-            <li><a href="#tentang">Tentang Saya</a></li>
-            <li><a href="#pendidikan">Riwayat Pendidikan</a></li>
-            <li><a href="#keahlian">Keahlian</a></li>
-            <li><a href="#karya">Karya</a></li>
-            <li><a href="Kumpulan Tugas/Kumpulan tugas.html">Kumpulan Tugas</a></li>
-        </ul>
-    </nav>
+<section id="hero">
+  <h1>Where Coffee Meets Digital</h1>
+  <p>Cafe estetik untuk kerja, kolaborasi & inspirasi</p>
+</section>
 
-    <!-- MAIN CONTENT -->
-    <main>
- 
-        <!-- SECTION ABOUT -->
-        <section id="tentang">
-            <article>
-                <h2>Tentang Saya</h2>
-                <img src="foto1.jpg" alt="Foto diri Anda sedang tersenyum di depan background polos" width="180">
+<section id="stats">
+  <div class="stat"><h3>2</h3><p>Cabang</p></div>
+  <div class="stat"><h3>5000+</h3><p>Pelanggan</p></div>
+  <div class="stat"><h3>4,8 ⭐</h3><p>Rating</p></div>
+</section>
 
-                <p>
-                    Saya adalah seorang pelajar / mahasiswa / developer pemula yang tertarik dalam dunia 
-                    web development, desain, dan teknologi. Saya suka belajar hal baru dan membuat proyek kreatif.
-                </p>
-            </article>
+<section id="about">
+  <div class="container">
+    <h2>Tentang Kami</h2>
+    <p>Cafe Digital adalah ruang kreatif yang menggabungkan kopi berkualitas dengan ekosistem digital modern.</p>
 
-            <aside>
-                <p><strong>Info Singkat:</strong> Berdomisili di Tasikmalaya, suka  belajar hal baru.</p>
-            </aside>
-        </section>
+    <div class="vision-mission">
+      <div class="box"><h3>Visi</h3><p>Menjadi cafe pilihan utama komunitas digital.</p></div>
+      <div class="box"><h3>Misi</h3><p>Menyediakan kopi terbaik dan ruang produktif.</p></div>
+    </div>
 
-        <!-- SECTION TABLE -->
-        <section id="pendidikan">
-            <h2>Riwayat Pendidikan & Pengalaman</h2>
+    <div class="team">
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/32.jpg"><h4>Andi</h4><p>Founder</p></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/women/44.jpg"><h4>Sinta</h4><p>Manager</p></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/56.jpg"><h4>Budi</h4><p>Head Barista</p></div>
+    </div>
 
-            <table border="1" cellpadding="6">
-                <caption>Riwayat Pendidikan dan Pengalaman</caption>
+    <div class="values">
+      <div class="box">☕ Quality Coffee</div>
+      <div class="box">🤝 Community</div>
+      <div class="box">💡 Innovation</div>
+    </div>
 
-                <thead>
-                    <tr>
-                        <th>Tahun</th>
-                        <th>Keterangan</th>
-                        <th>Tempat</th>
-                    </tr>
-                </thead>
+    <h3 style="margin-top:40px">Menu</h3>
+    <table>
+      <tr><th>Item</th><th>Harga</th></tr>
+      <tr><td>Espresso</td><td>Rp25.000</td></tr>
+      <tr><td>Cappuccino</td><td>Rp30.000</td></tr>
+      <tr><td>Digital Latte</td><td>Rp35.000</td></tr>
+    </table>
 
-                <tbody>
-                    <tr>
-                        <td>2023 - 2025</td>
-                        <td>Sekolah Menengah / Teknik Komputer dan Jaringan</td>
-                        <td>Smks Singaparna</td>
-                    </tr>
+    <div class="signature">
+      <div class="box">Signature Latte</div>
+      <div class="box">Cold Brew Digital</div>
+      <div class="box">Croissant Special</div>
+    </div>
+  </div>
+</section>
 
-                    <tr>
-                        <td>2025- Sekarang</td>
-                        <td>Mahasiswa / Teknik Informatika</td>
-                        <td>Universitas Mayasari Bakti</td>
-                    </tr>
+<section id="facilities" style="background:#fff7ed">
+  <h2>Our Facilities</h2>
+  <div class="container" style="display:flex;gap:40px;align-items:flex-start">
 
-                    <tr>
-                        <td colspan="3"><strong>Pengalaman</strong></td>
-                    </tr>
+    <!-- Facilities List -->
+    <div style="flex:1">
+      <h3>Fasilitas Unggulan</h3>
+      <ul style="list-style:none;padding:0;margin-top:20px">
+        <li style="padding:12px 0;border-bottom:1px solid #e0e0e0">📶 High-speed WiFi (100 Mbps)</li>
+        <li style="padding:12px 0;border-bottom:1px solid #e0e0e0">🏢 Meeting Room (kapasitas 10 orang)</li>
+        <li style="padding:12px 0;border-bottom:1px solid #e0e0e0">🔌 Charging Station di setiap meja</li>
+        <li style="padding:12px 0;border-bottom:1px solid #e0e0e0">🖨️ Printing & Scanning Service</li>
+        <li style="padding:12px 0;border-bottom:1px solid #e0e0e0">☕ 24/7 Coffee Service</li>
+        <li style="padding:12px 0">🅿️ Parking Area (motor & mobil)</li>
+      </ul>
+    </div>
 
-                    <tr>
-                        <td>2024</td>
-                        <td>pkl</td>
-                        <td>Jabbar 23</td>
-                    </tr>
-                </tbody>
+    <!-- Photo Gallery -->
+    <div style="flex:1">
+      <h3>Photo Gallery</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:20px">
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" style="width:100%;border-radius:10px">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" style="width:100%;border-radius:10px">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" style="width:100%;border-radius:10px">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" style="width:100%;border-radius:10px">
+        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9" style="width:100%;border-radius:10px">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" style="width:100%;border-radius:10px">
+      </div>
+    </div>
 
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Data terakhir diperbarui tahun 2025</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
+  </div>
+</section>
 
-        <!-- SECTION SKILLS -->
-        <section id="keahlian">
-            <h2>Daftar Keahlian</h2>
+<section id="contact">
+  <h2>Contact & Locations</h2>
+  <div class="branches">
+    <div class="box"><h4>Cabang Jakarta</h4><p>Jl. Sudirman No.10</p></div>
+    <div class="box"><h4>Cabang Bandung</h4><p>Jl. Dago No.20</p></div>
+  </div>
+  <div class="map">Map Placeholder</div>
+  <p style="text-align:center;margin-top:20px">📞 0812-3456-7890 | ✉️ info@cafedigital.com</p>
+</section>
 
-            <ul>
-                <li>Memasang – Wifi</li>
-                <li>Service– Wifi</li>
-                <li>Mengganti sandi – Wifi</li>
-                
-            </ul>
+<section id="reservation">
+  <h2>Reservation</h2>
+  <div class="container">
+    <form style="background:white;padding:25px;border-radius:10px;max-width:700px;margin:auto">
+      <label>Nama Lengkap*</label><br>
+      <input type="text" required style="width:100%;padding:10px"><br><br>
 
-            <h3>Keahlian Lain </h3>
-            <dl>
-                <dt>Komunikasi</dt>
-                <dd>Mampu berkomunikasi dengan baik dalam tim.</dd>
+      <label>Email*</label><br>
+      <input type="email" required style="width:100%;padding:10px"><br><br>
 
-    
+      <label>Nomor HP*</label><br>
+      <input type="tel" required style="width:100%;padding:10px"><br><br>
 
-            </dl>
-        </section>
+      <label>Tanggal Reservasi</label><br>
+      <input type="date" style="width:100%;padding:10px"><br><br>
 
-        <!-- SECTION PROJECT -->
-        <section id="karya">
-            <h2>Poto saat PKL</h2>
+      <label>Jam</label><br>
+      <input type="time" style="width:100%;padding:10px"><br><br>
 
-            <article>
-                <h3>Poto lagi PKL</h3>
-                <p>Berikut adalah salah satu poto yang pernah PKL di Jabbar 23:</p>
+      <label>Jumlah Orang (1–10)</label><br>
+      <input type="number" min="1" max="10" style="width:100%;padding:10px"><br><br>
 
-                <!-- YOUTUBE EMBED -->
-                <iframe width="560" height="315" 
-                    img src="sani.jpg"
-                    
-                    
-                </iframe>
+      <label>Pilih Cabang</label><br>
+      <select style="width:100%;padding:10px">
+        <option>Jakarta</option>
+        <option>Bandung</option>
+      </select><br><br>
 
-                <p>
-                    Link ke project GitHub saya:
-                    <a href="https://github.com/" target="_blank">Klik di sini</a>
-                </p>
-            </article>
-        </section>
+      <label>Permintaan Khusus</label><br>
+      <textarea rows="4" style="width:100%;padding:10px"></textarea><br><br>
 
-    </main>
+      <input type="checkbox" required> Saya mengonfirmasi data reservasi sudah benar<br><br>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Portofolio Pribadi Anda</p>
-    </footer>
+      <button type="submit" style="padding:12px 25px;background:#2c3e50;color:white;border:none;border-radius:5px">Submit Reservasi</button>
+    </form>
+  </div>
+</section>
+
+<section id="support">
+  <h2>Contact Support</h2>
+  <p style="text-align:center">📞 0812-3456-7890 | ✉️ support@cafedigital.com</p>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="container">
+    <div class="box"><strong>Apakah reservasi wajib?</strong><br>Tidak wajib, tetapi disarankan di jam sibuk.</div><br>
+    <div class="box"><strong>Berapa lama durasi reservasi?</strong><br>Durasi standar adalah 2 jam.</div><br>
+    <div class="box"><strong>Apakah tersedia meeting room?</strong><br>Ya, tersedia dan bisa dipesan.</div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Cafe Digital. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
